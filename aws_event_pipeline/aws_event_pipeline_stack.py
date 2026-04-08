@@ -38,7 +38,7 @@ class AwsEventPipelineStack(Stack):
             self, "ConsumerLambda",
             runtime=_lambda.Runtime.PYTHON_3_11,
             handler="consumer.handler",
-            code=_lambda.Code.from_asset("lambda"),
+            code=_lambda.Code.from_asset("aws_event_pipeline/lambda"),
         )
 
         consumer.add_event_source(
