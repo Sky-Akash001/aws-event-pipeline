@@ -13,7 +13,7 @@ class AwsEventPipelineStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        bucket = s3.Bucket(slf, "MyBucket2")
+        bucket = s3.Bucket(self, "MyBucket2")
 
         queue = sqs.Queue(self, "MyQueue2")
 
