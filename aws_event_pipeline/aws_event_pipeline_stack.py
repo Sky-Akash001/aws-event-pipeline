@@ -21,7 +21,7 @@ class AwsEventPipelineStack(Stack):
             self, "ProducerLambda",
             runtime = _lambda.Runtime.PYTHON_3_11,
             handler = "producer.handler",
-            code = _lambda.Code.from_asset("lambda"),
+            code = _lambda.Code.from_asset("aws_event_pipeline/lambda"),
             environment = {
                 "QUEUE_URL": queue.queue_url
             }
